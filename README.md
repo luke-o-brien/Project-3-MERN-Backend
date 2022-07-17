@@ -6,6 +6,15 @@ Please feel free to use the below credentials to login when viewing the project
 Email - portfoliouser@myfoundsounds.com
 Password - Portfolio1!
 
+### contents 
+- project overview 
+- Technologies used 
+- Project Brief
+- planning, Whiteboarding and project management
+- challenge one 
+- challenge two
+- Known Bugs
+- Future developments
 
 ### Project overview
 This project involved building a full stack app using the MERN stack. Our project was a social media site based around audio. The site allows users to upload sounds from their devices and search for and listen to other users' sounds. For this project, we created our back-end API using MongoDb and Express along with utilising the Cloudinary API for audio file storage. To aid the development of the project, our group utilised Jira and scrum working to plan the project, assign tasks and track progress through the two one-week sprints.
@@ -35,12 +44,13 @@ Once we had settled on an idea for our project we worked collaboratively to crea
 
 For this project we used JIRA as a project management tool. At the beginning of the project we worked out what individual tasks needed to be done to build our project and set out a timeline for the duration of the two week project. We then divided the tasks into two one week sprints creating epics and stories.
 
-<img src="assets/Screenshots/JIRA-sprint-one-board.png"  width=49.5% position/></img>
-<img src="assets/Screenshots/JIRA-sprint-one-board.png"  width=49.5% position/></img>
-
 We decided to begin the project working together to create the essential backend functionality together as a group as well as to set up the front end structure. We divided the rest of the tasks between different members of the group to work on separately. During the rest of the project we worked individually on our assigned JIRA tickets as well having pair/group programming and debugging sessions. This was an effective working method as it allowed us to work efficiently by specisiling on an element of the project but also allowing us to understand others work and allowed us to debug problems efficiently.
 
 Throughout the project we used our JIRA for assigning tasks, Keeping track of our progress on the JIRA board leaving comments on stories with explanations and updates. Along with Using JIRA we also had a daily stand up on zoom to update the group on the work we had done, things we were struggling with and bugs that had been noticed. We stayed in contact between sessions on Slack updating the other members on work we have been doing. This allowed us to keep track of what was going on, plan our time effectively and support each other.
+
+<img src="assets/Screenshots/JIRA-sprint-one-board.png" position/></img>
+<img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/Jira-Hashtag-comments.png"  width=49.5% position/></img>
 
 ### Creating the Backend API
 This was our 3rd coding project however was the first one where we would be building a backend. Due to the importance of the backend we worked collaboratively to create the core elements of the backend. We started by creating the core routes for api these being the sound endpoints and controllers. This was the backbone of the project and so we spent time working together to ensure that it was logically structured and that all of the required information was included in the model.
@@ -89,11 +99,15 @@ clockwise hashtag autocomplete search bar, all sounds page , login page, individ
 <img src="assets/Screenshots/SoundList-screenshot.png"  width=49.5% position/></img>
 <img src="assets/Screenshots/IndividualSound-card.png"  width=49.5% position/></img>
 <img src="assets/Screenshots/Login-page.png"  width=49.5% position/></img>
+
 ### Lessons Learnt
 During the project I learnt a number of things and was able to improve upon a number of skills
 - I learnt the importance of planning and communication when working in a development team
 - This project greatly improved my debugging skills by giving me the chance to debug other team members code
 - I learnt about the importance of consistency and organising code in a easy to understand and easy to maintain way
+
+### Known Bugs 
+- **Hashtag:** There is nothing currently in place to prevent duplicate hashtags being posted. if more than one user adds the same hashtag it creates a duplicate which means that when a user searches multiples of the same hashtag are rendered in the dropdown. To fix this bug I would create a function which on submitting would get existing hashtags, loop through them to check against the user submitted ones and if no match is found post these to the APIs hashtag endpoint.  
 
 ### possible future developments
 - Adding a like function with the ability to view all the songs you have liked.
