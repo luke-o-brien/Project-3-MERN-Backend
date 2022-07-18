@@ -1,3 +1,4 @@
+## ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, Software Engineering Immersive
 ## My Found Sounds MERN Group project
 
 Link to live site https://myfoundsounds.netlify.app/
@@ -6,18 +7,25 @@ Please feel free to use the below credentials to login when viewing the project
 Email - portfoliouser@myfoundsounds.com
 Password - Portfolio1!
 
-### contents 
-- project overview 
-- Technologies used 
-- Project Brief
-- planning, Whiteboarding and project management
-- challenge one 
-- challenge two
-- Known Bugs
-- Future developments
+### Contents 
 
-### Project overview
+1. [Project Overview](#projectoverview)
+2. [Technologies used](#Technologies-used)
+4. [Project Brief](#Project-Brief)
+5. [planning, Whiteboarding and project management](#planning-Whiteboarding-and-project-management)
+6. [Creating the Backend](#Creating-the-Backend)
+7. [challenge one](#challenge-one)
+8. [challenge two](#challenge-two)
+9. [Known Bugs](#Known-Bugs)
+10. [Future developments](#Future-developments)
+
+
+<div id='projectoverview'></div>
+
+### Project overview 
 This project involved building a full stack app using the MERN stack. Our project was a social media site based around audio. The site allows users to upload sounds from their devices and search for and listen to other users' sounds. For this project, we created our back-end API using MongoDb and Express along with utilising the Cloudinary API for audio file storage. To aid the development of the project, our group utilised Jira and scrum working to plan the project, assign tasks and track progress through the two one-week sprints.
+
+<div id='Technologies-used'></div>
 
 ### Technologies Used
 - HTML
@@ -27,6 +35,8 @@ This project involved building a full stack app using the MERN stack. Our projec
 - MongoDb
 - Express.js
 - JIRA
+
+<div id='Project-Brief'></div>
 
 ### Project Brief
 - Work in a team, using git to code collaboratively.
@@ -38,9 +48,15 @@ This project involved building a full stack app using the MERN stack. Our projec
 - Have a visually impressive design
 - Have automated tests for at least one RESTful resource on the back-end.
 
+
+<div id='planning-Whiteboarding-and-project-management'></div>
+
 ### Planning, whiteboarding and project management
-Once we had settled on an idea for our project we worked collaboratively to create a wireframe for our project using excalidraw. This allowed us to see how our app would look and give us a better understanding of what would need to be done to create this and help inform our timeline, MVP and stretch goals.
+We began by discussing what we wanted our project to be and used a Figma board to note down ideas a collate useful resources. Once we had settled on an idea for our project we worked collaboratively to create a wireframe for our project using excalidraw. This allowed us to see how our app would look and give us a better understanding of what would need to be done to create this and help inform our timeline, MVP and stretch goals. We also created a flow chart on Miro which plotted the users journey through the site at this stage we also started thinking about how we would achieve each step and wrote snippets of code to better understand the practicality of impleting our ideas. 
+
 <img src="assets/Screenshots/Excalidraw-Wireframes.png"  position/></img>
+<img src="assets/Screenshots/FIgma.png" width=49.75% position/></img>
+<img src="assets/Screenshots/Miro.png"  width=49.75% position/></img>
 
 For this project we used JIRA as a project management tool. At the beginning of the project we worked out what individual tasks needed to be done to build our project and set out a timeline for the duration of the two week project. We then divided the tasks into two one week sprints creating epics and stories.
 
@@ -49,12 +65,18 @@ We decided to begin the project working together to create the essential backend
 Throughout the project we used our JIRA for assigning tasks, Keeping track of our progress on the JIRA board leaving comments on stories with explanations and updates. Along with Using JIRA we also had a daily stand up on zoom to update the group on the work we had done, things we were struggling with and bugs that had been noticed. We stayed in contact between sessions on Slack updating the other members on work we have been doing. This allowed us to keep track of what was going on, plan our time effectively and support each other.
 
 <img src="assets/Screenshots/JIRA-sprint-one-board.png" position/></img>
-<img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.5% position/></img>
-<img src="assets/Screenshots/Jira-Hashtag-comments.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.75% position/></img>
+<img src="assets/Screenshots/Jira-Hashtag-comments.png" width=49.75% position/></img>
 
-### Creating the Backend API
+
+<div id='Creating-the-Backend'></div>
+
+### Creating the Backend
 This was our 3rd coding project however was the first one where we would be building a backend. Due to the importance of the backend we worked collaboratively to create the core elements of the backend. We started by creating the core routes for api these being the sound endpoints and controllers. This was the backbone of the project and so we spent time working together to ensure that it was logically structured and that all of the required information was included in the model.
 We also spent time as a group working on the backend for user registration and login. The user aspect of our project was very important as with the social media approach we had taken we wanted uploaded sounds to match to users. We also wanted to ensure that only users who were registered and logged in could perform certain functions therefore we placed these functions such as uploading sounds, deleting sounds and commenting within secure routes.
+
+
+<div id='challenge-one'></div>
 
 ### Challenge one - Hashtags
 One of the features which I was responsible for creating was the hashtag search functionality. We decided that as our project was a social media site that we should give users the ability to search for sounds more specifically using hashtags. This presented a number of challenges.
@@ -73,7 +95,7 @@ The second step in creating this was creating an autocomplete search bar which w
       console.log(hashdata)
 ```
 
-I wrote the above function which maps through the hashtag array and breaks them down into objects with two keys and then posts them to the hastag API. 
+I wrote the above function which maps through the hashtag array and breaks them down into objects with two keys and then posts them to the hastag API as seperate object which can be mapped through in the frontend using react. The final step in implementing this was creating a backend function which would return the sounds which matched the selected hashtag. To do this I created the function below. 
 
 ``` js 
 async function getHashtag(req, res) {
@@ -90,15 +112,21 @@ async function getHashtag(req, res) {
 }
 ```
 
+This function works using querys. When the user clicks on a hashtag this is appended to the API call as a query. this function takes that query and using the find method locates sounds whose hashtag array contains the hashtag. This was the most difficult aspect of the hashtag functionality as it required working with two things I had not used before queries in API calls and REGEX expressions.
+
+<div id='challenge-two'></div>
+
 ### challenge two - All sounds page and working categories filter
 Another aspect of the project I was assigned was the creation of the All sounds page as well as setting up the category filter function.
 
 ### Screenshots of Deployed Project
 clockwise hashtag autocomplete search bar, all sounds page , login page, individual sound page 
-<img src="assets/Screenshots/HashtagSearchbar.png"  width=49.5% position/></img>
-<img src="assets/Screenshots/SoundList-screenshot.png"  width=49.5% position/></img>
-<img src="assets/Screenshots/IndividualSound-card.png"  width=49.5% position/></img>
-<img src="assets/Screenshots/Login-page.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/Updated/Screenshot 2022-07-18 at 14.17.12.png"  width=49.75% position/></img>
+<img src="assets/Screenshots/Updated/updatedsoundList.png"  width=49.75% position/></img>
+<img src="assets/Screenshots/IndividualSound-card.png"  width=49.75% position/></img>
+<img src="assets/Screenshots/Updated/sounddeletemodal.png"  width=49.75% position/></img>
+
+<div id='Lessons-Learnt'></div>
 
 ### Lessons Learnt
 During the project I learnt a number of things and was able to improve upon a number of skills
@@ -106,8 +134,12 @@ During the project I learnt a number of things and was able to improve upon a nu
 - This project greatly improved my debugging skills by giving me the chance to debug other team members code
 - I learnt about the importance of consistency and organising code in a easy to understand and easy to maintain way
 
+<div id='Known-Bugs'></div>
+
 ### Known Bugs 
 - **Hashtag:** There is nothing currently in place to prevent duplicate hashtags being posted. if more than one user adds the same hashtag it creates a duplicate which means that when a user searches multiples of the same hashtag are rendered in the dropdown. To fix this bug I would create a function which on submitting would get existing hashtags, loop through them to check against the user submitted ones and if no match is found post these to the APIs hashtag endpoint.  
+
+<div id='Future-developments'></div>
 
 ### possible future developments
 - Adding a like function with the ability to view all the songs you have liked.
