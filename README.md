@@ -63,8 +63,8 @@ We began by discussing what we wanted our project to be and used a Figma board t
 
 
 <img src="assets/Screenshots/Excalidraw-Wireframes.png"  position/></img>
-<img src="assets/Screenshots/FIgma.png" width=49.75% position/></img>
-<img src="assets/Screenshots/Miro.png"  width=49.75% position/></img>
+<img src="assets/Screenshots/FIgma.png" width=49.5% position/></img>
+<img src="assets/Screenshots/Miro.png"  width=49.5% position/></img>
 
 For this project we used JIRA as a project management tool. At the beginning of the project we worked out what individual tasks needed to be done to build our project and set out a timeline for the duration of the two week project. We then divided the tasks into two one week sprints creating epics and stories.
 
@@ -73,8 +73,8 @@ We decided to begin the project working together to create the essential backend
 Throughout the project we used our JIRA for assigning tasks, Keeping track of our progress on the JIRA board leaving comments on stories with explanations and updates. Along with Using JIRA we also had a daily stand up on zoom to update the group on the work we had done, things we were struggling with and bugs that had been noticed. We stayed in contact between sessions on Slack updating the other members on work we have been doing. This allowed us to keep track of what was going on, plan our time effectively and support each other.
 
 <img src="assets/Screenshots/JIRA-sprint-one-board.png" position/></img>
-<img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.75% position/></img>
-<img src="assets/Screenshots/Jira-Hashtag-comments.png" width=49.75% position/></img>
+<img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/Jira-Hashtag-comments.png" width=49.5% position/></img>
 
 
 <div id='Creating-the-Backend'></div>
@@ -178,12 +178,12 @@ When the user clicks on the category that they want to view the handleclick func
 
 ### Screenshots of Deployed Project
 
-<img src="assets/Screenshots/Updated/Screenshot 2022-07-18 at 14.17.12.png"  width=49.75% position/></img>
-<img src="assets/Screenshots/Updated/updatedsoundList.png"  width=49.75% position/></img>
-<img src="assets/Screenshots/IndividualSound-card.png"  width=49.75% position/></img>
-<img src="assets/Screenshots/Updated/sounddeletemodal.png"  width=49.75% position/></img>
-<img src="assets/Screenshots/SoundCreate-with-cloudinaryWidget.png" width=49.75% position/></img>
-<img src="assets/Screenshots/Login-page.png" width=49.75% position/></img>
+<img src="assets/Screenshots/Updated/Screenshot 2022-07-18 at 14.17.12.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/Updated/updatedsoundList.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/IndividualSound-card.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/Updated/sounddeletemodal.png"  width=49.5% position/></img>
+<img src="assets/Screenshots/SoundCreate-with-cloudinaryWidget.png" width=49.5% position/></img>
+<img src="assets/Screenshots/Login-page.png" width=49.5% position/></img>
 
 <div id='Lessons-Learnt'></div>
 
