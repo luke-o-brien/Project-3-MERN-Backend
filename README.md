@@ -21,6 +21,7 @@ Password - Portfolio1!
 4. [Project Brief](#Project-Brief)
 5. [Planning, Whiteboarding and Project Management](#planning-Whiteboarding-and-project-management)
 6. [Creating the Backend](#Creating-the-Backend)
+7. [Tests](#tests)
 7. [Challenge One - Hashtags](#challenge-one)
 8. [Challenge One - All Sounds Page and Categories Filter](#challenge-two)
 9. [Known Bugs](#Known-Bugs)
@@ -105,6 +106,34 @@ schema.plugin(uniqueValidator)
 
 ```
 Our User Model included the ability to hash a user's password for security as well as hide it from being returned in calls to the api endpoint. We implemented this using the bcrypt library and the Mongoose Hidden functionality. To ensure that we did not get duplicate accounts and that users were signing up with valid emails we used the validator library and Mongoose unique validator.
+
+<div id='Technologies-used'></div>
+
+### Tests
+
+One of the Projects was to include a testing element within the project. We added our tests to our user routes to test registration and login as well as to our sound endpoints. To create the tests we used the Chai, Mocha and supertest libarys. An example of one of our tests is below which check if a user is able to register.  
+
+``` js 
+
+it('Should be able to register a new user', (done) => {
+
+    api.post('/api/register')
+      // send this data (post)
+      .send({
+        "username": "luke",
+        "password": "Whisperers7!",
+        "passwordConfirmation": "Whisperers7!",
+        "email": "whispererLuke@whisperers.com",
+        
+      })
+      .end((err, res) => {
+        expect(res.status).to.eq(201)
+        expect(res.body.username).to.eq('luke')
+        done()
+      })
+  })
+  
+```
 
 <div id='challenge-one'></div>
 
