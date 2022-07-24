@@ -7,7 +7,8 @@
 ### Login credentials
 <br/>
 
-Please feel free to use the below credentials to login when viewing the project
+Please use the credentials below to login when viewing the project
+
 <br/>
 
 Email - portfoliouser@myfoundsounds.com
@@ -59,19 +60,21 @@ This project involved building a full stack app using the MERN stack. Our projec
 
 <div id='planning-Whiteboarding-and-project-management'></div>
 
-### Planning, whiteboarding and project management
-We began by discussing what we wanted our project to be and used a Figma board to note down ideas and collate useful resources. Once we had settled on an idea for our project we worked collaboratively to create a wireframe for our project using excalidraw. This allowed us to see how our app would look and give us a better understanding of what would need to be done to create this and help inform our timeline, MVP and stretch goals. We also created a flow chart on Miro which plotted the users journey through the site. At this stage we also started thinking about how we would achieve each step and wrote snippets of code to better understand the practicality of implementing our ideas. 
+### Planning, Whiteboarding and Project Management
+
+We began by discussing what we wanted our project to be and used a Figma board to note down ideas and collate useful resources. Once we had settled on an idea for our project we worked collaboratively to create wireframes for our project using excalidraw. This allowed us to see how our app would look and give us a better understanding of what would need to be done to create it and help inform our timeline, MVP and stretch goals. We also created a flow chart on Miro which plotted the user journey through the site. At this stage we also started thinking about how we would achieve each step and wrote snippets of code to better understand the practicality of implementing our ideas.
 
 
 <img src="assets/Screenshots/Excalidraw-Wireframes.png"  position/></img>
 <img src="assets/Screenshots/FIgma.png" width=49.5% position/></img>
 <img src="assets/Screenshots/Miro.png"  width=49.5% position/></img>
 
-For this project we used JIRA as a project management tool. At the beginning of the project we worked out what individual tasks needed to be done to build our project and set out a timeline for the duration of the two week project. We then divided the tasks into two one week sprints creating epics and stories.
+For this project we used JIRA as a project management tool. At the beginning of the project we worked out what individual tasks needed to be done to build our project and set out a timeline for the duration of the two week project. We then divided the tasks into two one-week sprints creating epics and stories.
 
-We decided to begin the project working together to create the essential backend functionality together as a group as well as to set up the front end structure. We divided the rest of the tasks between different members of the group to work on separately. During the rest of the project we worked individually on our assigned JIRA tickets as well having pair/group programming and debugging sessions. This was an effective working method as it allowed us to work efficiently by specisiling on an element of the project but also allowing us to understand others work and allowed us to debug problems efficiently.
+We began the project working together to create the essential backend functionality together as a group as well as to set up the front end structure. We divided the rest of the tasks between different members of the group to work on separately. During the rest of the project we worked individually on our assigned JIRA tickets as well having pair/group programming and debugging sessions. This was an effective working method as it allowed us to work efficiently by specialising on an element of the project but also allowing us to understand others work and allowed us to debug problems efficiently.
 
-Throughout the project we used our JIRA for assigning tasks, Keeping track of our progress on the JIRA board leaving comments on stories with explanations and updates. Along with Using JIRA we also had a daily stand up on zoom to update the group on the work we had done, things we were struggling with and bugs that had been noticed. We stayed in contact between sessions on Slack updating the other members on work we have been doing. This allowed us to keep track of what was going on, plan our time effectively and support each other.
+Throughout the project we used JIRA for assigning tasks, keeping track of progress on the JIRA board, leaving comments on stories with explanations and updates. We also had a daily stand up on Zoom to update the group on the work we had done, things we were struggling with and bugs that had been noticed. We stayed in contact between sessions on Slack updating the other members on work we have been doing. This allowed us to keep track of what was going on, plan our time effectively and support each other.
+
 
 <img src="assets/Screenshots/JIRA-sprint-one-board.png" position/></img>
 <img src="assets/Screenshots/JIRA-Roadmap.png"  width=49.5% position/></img>
@@ -81,10 +84,10 @@ Throughout the project we used our JIRA for assigning tasks, Keeping track of ou
 <div id='Creating-the-Backend'></div>
 
 ### Creating the Backend
-This was our third coding project however was the first one where we would be building a backend. Due to the importance of the backend we worked collaboratively to plan and create the core elements which would be used by everyone when completing their individual tasks. 
-We started by creating the core routes for the API one of these being the sound endpoint and controllers. This was the backbone of the project and so we spent time working together to ensure that it was logically structured and that all of the required information was included in the Sound Model. We also discussed and planned how the cloudinary storage and upload of the users sound would fit into our model once it had been added at a later stage. 
+This was our third coding project but was the first one where we would be building a backend. Due to the importance of the backend we worked collaboratively to plan and create the core elements which would be used by everyone when completing their individual tasks. We started by creating the core routes for the API one of these being the sound endpoint and controllers. This was the backbone of the project and so we spent time working together to ensure that it was logically structured and that all the required information was included in the Sound Model. We also discussed and planned how the cloudinary storage and upload of the users sounds would fit into our model once it had been added at a later stage.
 
-We also spent time as a group working on the backend for user registration and login. The user aspect of our project was very important as with the social media approach we had taken we wanted uploaded sounds to match to users. We also wanted to ensure that only users who were registered and logged in could perform certain functions therefore we placed these functions such as uploading sounds, deleting sounds and commenting within secure routes. The secure route was authenticated using a bearer token which was assigned to the user at login; this was implemented using the JsonWebToken library. 
+We also spent time as a group working on the backend for user registration and login. The user aspect of our project was very important as with the social media approach we had taken we wanted uploaded sounds to be assigned to the user who uploaded then. We also wanted to ensure that only users who were registered and logged in could perform certain functions therefore we placed these functions such as uploading sounds, deleting sounds and commenting within secure routes. The secure route was authenticated using a bearer token which was assigned to the user at login; this was implemented using the JsonWebToken library.
+
 
 
 ``` js
@@ -105,7 +108,7 @@ schema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true, _id
 schema.plugin(uniqueValidator) 
 
 ```
-Our User Model included the ability to hash a user's password for security as well as hide it from being returned in calls to the api endpoint. We implemented this using the bcrypt library and the Mongoose Hidden functionality. To ensure that we did not get duplicate accounts and that users were signing up with valid emails we used the validator library and Mongoose unique validator.
+Our User Model included the ability to hash a user's password for security as well as hide it from being returned in calls to the API endpoint. We implemented this using the bcrypt library and the Mongoose hidden functionality. To ensure that we did not get duplicate accounts and that users were signing up with valid emails we used the validator library and Mongoose unique validator.
 
 <div id='Technologies-used'></div>
 
@@ -138,14 +141,12 @@ it('Should be able to register a new user', (done) => {
 <div id='challenge-one'></div>
 
 ### Challenge one - Hashtags
-One of the features which I was responsible for creating was the hashtag search functionality. We decided that as our project was a social media site that we should give users the ability to search for sounds more specifically using hashtags. This presented a number of challenges.
-Firstly the create sound form needed for users to input multiple hashtags and for those to be stored correctly in the API. The solution I used was by having users enter hashtags in a comma separated list which when submitted would be split and stored as an array in the sounds object. One of the issues I faced was getting this to work alongside our current input function without it affecting other fields. To make this work as needed, place a conditional statement within the onchange function.
+One of the features which I was responsible for creating was the hashtag search functionality. We decided that as our project was a social media site that we should give users the ability to search for sounds more specifically using hashtags. This presented a number of challenges. Firstly the create sound form had to allow users to input multiple hashtags and for those to be stored correctly in the API. The solution I used was by having users to enter hashtags in a comma separated list which when submitted would be split and stored as an array in the sounds object. One of the issues I faced was getting this to work alongside our current input function without it affecting other fields. To achieve this, I placed a conditional statement within the onchange function.
 
 ```js 
 [event.target.name]: event.target.name === "hashtag" ? event.target.value.replace(" ", "").split(",") : event.target.value
 ```
-
-The second step in creating this was creating an autocomplete search bar which when the users typed in would display a list of hashtags and when clicked on would redirect them to a results page displaying all items which matched these. To create this functionally I first made a new API endpoint specifically for hashtags which allowed for get and post. The posting of hashtags to this endpoint had to happen when the user submitted the upload sound form at the sametime the hashtags were added to the main sound object. However the data needed to be submitted in a different format to the hashtag data endpoint. The Sound endpoint had hashtags submitted as an array however for this endpoint I wanted the hashtag to be submitted as separate objects. 
+The second step in creating this was to create an autocomplete search bar which when the users typed in would display a list of hashtags containing the input text and when clicked would redirect them to a results page displaying all items with that hashtag. To create this functionally I first made a new API endpoint specifically for hashtags which allowed for get and post. The posting of hashtags to this endpoint had to happen when the user submitted the upload sound form, i.e. at the same time the hashtags were added to the main sound object. However, the data needed to be submitted in a different format to the hashtag data endpoint. The Sound endpoint required hashtags to be submitted as an array. but for the hashtag search endpoint I wanted the hashtag to be submitted as separate objects. 
 
 ``` js 
  const hashArray = formData.hashtag
@@ -153,8 +154,7 @@ The second step in creating this was creating an autocomplete search bar which w
       const { hashdata }  = await axios.post('/api/hashtags', hashobjects)
       console.log(hashdata)
 ```
-
-I wrote the above function which maps through the hashtag array and breaks them down into objects with two keys and then posts them to the hashtag API as separate objects which can be mapped through in the frontend using react. The final step in implementing this was creating a backend function which would return the sounds which matched the selected hashtag. To do this I created the function below. 
+I wrote the above function which maps through the hashtag array and breaks them down into objects with two keys and then posts them to the hashtag API as separate objects which can be mapped through in the frontend using React. The final step in implementing this was creating a backend function which would return the sounds which matched the selected hashtag. To do this I created the function below.
 
 ``` js 
 async function getHashtag(req, res) {
@@ -170,11 +170,8 @@ async function getHashtag(req, res) {
   }
 }
 ```
-
-This function works using queries. When the user clicks on a hashtag this is appended to the API call as a query. The function takes that query and using the find method locates sounds whose hashtag array contains the hashtag. This was the most difficult aspect of the hashtag functionality as it required working with two things I had not used before, queries in API calls and REGEX expressions both of which required substantial research to understand and implement. 
-
-The creation of this page also involved using react to display the properties of each sound stored in the API and display them on the page. In some cases this required manipulating the data to make it easier for the user to view as can be seen in the sound created date/time element shown below. Along with this I also used CSS and SCSS to style the page and organise the information in a user friendly manner. This page and sound card styling would form the basis for the rest of the index pages in this project. 
-
+This function works using queries. When the user clicks on a hashtag this is appended to the API call as a query. The function takes that query and using the find method locates sounds whose hashtag array contains the hashtag. This was the most difficult aspect of the hashtag functionality as it required working with two things I had not used before, queries in API calls and REGEX expressions both of which required substantial research to understand and implement.
+The creation of this page also involved using React to display the properties of each sound stored in the API and display them on the page. In some cases this required manipulating the data to make it easier for the user to view as can be seen in the sound created date/time element shown below. Along with this I also used CSS and SCSS to style the page and organise the information in a user friendly manner. This page and sound card styling would form the basis for the rest of the index pages in this project.
 
 ``` js 
  <p>{sound.createdAt.split("T")[0].split("-").slice(0).reverse().join(" ")}</p>
@@ -183,7 +180,7 @@ The creation of this page also involved using react to display the properties of
 <div id='challenge-two'></div>
 
 ### challenge two - All sounds page and categories filter
-Another aspect of the project I was assigned was the creation of the All sounds page. One of the primary features of this page was the filter sound by category sidebar. To create this I firstly created an array of categories which were selectable for the user to assign their sound to upon upload. These were placed in the left sidebar for users to interact with. To make the buttons functional I wrote the below functions.
+Another aspect of the project I was assigned was the creation of the All Sounds page. One of the primary features of this page was the filter sound by category sidebar. To create this I firstly created an array of categories which were selectable by the user to assign their sound to upon upload. I then created the left sidebar for users to interact with. To make the buttons functional I wrote the below functions.
 
 ``` js
   function handleClick(event) {
@@ -201,8 +198,7 @@ Another aspect of the project I was assigned was the creation of the All sounds 
     })
   }
 ```
-When the user clicks on the category that they want to view the handleclick function is called. This takes the InnerHTML value and sets the filterValue to that, If the user selects the all sounds category the the value is set to an empty string. To have this reflected on the page the category filter function runs which checks the sounds in the api and returns only the ones for which the category matches. if the user has selected all sounds then there is no filter and all sounds are returned which is the default state on page load. 
-
+When the user clicks on the category that they want to view the handleclick function is called. This takes the InnerHTML value and sets the filterValue to that, If the user selects the All Sounds category the value is set to an empty string. To have this reflected on the page the category filter function runs which checks the sounds in the API and returns only the ones for which the category matches. if the user has selected All Sounds then there is no filter and all sounds are returned which is the default state on page load.
 
 
 ### Screenshots of Deployed Project
@@ -216,26 +212,30 @@ When the user clicks on the category that they want to view the handleclick func
 
 <div id='Lessons-Learnt'></div>
 
+
 ### Lessons Learnt
-- During this project I learnt the importance of planning and communication when working in a development team and how to communicate effectively with multiple team members who are working on code which may affect the code you are working on 
+- During this project I learnt the importance of planning and communication when working in a development team and how to communicate effectively with multiple team members who are working on code which may affect the code you are working on
 
-- This project greatly improved my debugging skills by giving me multiple opportunities to look at and debug other team members' code through pair and group debugging sessions. 
+- This project greatly improved my debugging skills by giving me multiple opportunities to look at and debug other team members' code through pair and group debugging sessions.
 
-- I learnt about the importance of consistency and organising code in an easy to understand and easy to maintain way. As everyone in the team would be interacting with each other's code we developed naming conventions, document structure outlines and general styling guidelines.  
+- I learnt about the importance of consistency and organising code in an easy to understand and easy to maintain way. As everyone in the team would be interacting with each other's code we developed naming conventions, document structure outlines and general styling guidelines.
 
 <div id='Known-Bugs'></div>
 
+
 ### Known Bugs 
-- **Hashtag:** There is nothing currently in place to prevent duplicate hashtags being posted. if more than one user adds the same hashtag it creates a duplicate which means that when a user searches multiples of the same hashtag are rendered in the dropdown. To fix this bug I would create a function which on submitting would get existing hashtags, loop through them to check against the user submitted ones and if no match is found post these to the APIs hashtag endpoint.  
+- **Hashtag:** There is nothing currently in place to prevent duplicate hashtags being posted. if more than one user adds the same hashtag it creates a duplicate which means that when a user searches multiples of the same hashtag are rendered in the dropdown. To fix this bug I would create a function which on submitting would get existing hashtags, loop through them to check against the user submitted ones and if no match is found post these to the APIs hashtag endpoint.
 
 <div id='Future-developments'></div>
 
+
 ### possible future developments
-- Adding a like function with the ability to view all the songs you have liked.
-- Allowing users to follow others with potential for timeline feature like seen on social media
+- Adding a like function with the ability to view all the sounds you have liked.
+- Allowing users to follow others with potential for a timeline feature like seen on social media sites
 - Fully responsive design
 
-### created with
+
+### Created With
 - Teresa Morini -- https://github.com/tjmcodes
 - Laleh Shahidi -- https://github.com/Laleh-S
 - Kazimierz Jankowski -- https://github.com/donnysnarko
