@@ -114,8 +114,7 @@ Our User Model included the ability to hash a user's password for security as we
 
 ### Tests
 
-One of the Projects was to include a testing element within the project. We added our tests to our user routes to test registration and login as well as to our sound endpoints. To create the tests we used the Chai, Mocha and supertest libarys. An example of one of our tests is below which check if a user is able to register.  
-
+One of the tasks was to include a testing element within the project. We added our tests to our user routes to test registration and login as well as to our sound endpoints. To create the tests we used the Chai, Mocha and supertest libraries. An example of one of our tests is below, it checks if a user is able to register.
 ``` js 
 
 it('Should be able to register a new user', (done) => {
