@@ -58,6 +58,14 @@ This project involved building a full stack app using the MERN stack. Our projec
 - Have automated tests for at least one RESTful resource on the back-end.
 
 
+Code Installation:
+Clone or download this repo
+Install dependencies in terminal with command: npm i 
+Run mongoose in your computers terminal with the comand mongos
+within the backend file run command: npm i 
+Clone or download the Frontend repo 
+Install dependencies in terminal with command: npm i start then start server with terminal command: npm start
+
 <div id='planning-Whiteboarding-and-project-management'></div>
 
 ### Planning, Whiteboarding and Project Management
