@@ -220,6 +220,13 @@ When the user clicks on the category that they want to view the handleclick func
 
 <div id='Lessons-Learnt'></div>
 
+### Wins 
+
+- We were successfully able to create our first full stack project using the MERN stack. The project had all of the functionality which was set out in our MVP goals including user registration and login, sound directory, individual sound pages and sound upload form.
+
+- Within our create account and our create sounds forms we were successfully able to set up and integrate cloudinary cloud storage and the cloudinary upload widget. This allowed users to upload sounds and images which were stored in our API. 
+- I created a functional search bar with autocomplete functionality which was able to take data from the sound create form, post it to a different end point and then retrieve this, display this in the autocomplete and then return the matching items.
+- Worked collaboratively on our first group project by managing time and the workflow well through the use of stand ups, slack and JIRA. engaged in group and pair programming sessions to help with debugging trickey issues. 
 
 ### Lessons Learnt
 - During this project I learnt the importance of planning and communication when working in a development team and how to communicate effectively with multiple team members who are working on code which may affect the code you are working on
